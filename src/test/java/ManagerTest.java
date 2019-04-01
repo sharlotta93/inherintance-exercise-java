@@ -25,6 +25,12 @@ public class ManagerTest {
     }
 
     @Test
+    public void cannotChangeNameToNull() {
+        manager.setName(" ");
+        assertEquals("Bob", manager.getName());
+    }
+
+    @Test
     public void hasNI() {
         assertEquals(245883, manager.getNi());
     }
@@ -62,6 +68,12 @@ public class ManagerTest {
     public void canChangeDepartmentName() {
         manager.setDeptName("Tesco");
         assertEquals("Tesco", manager.getDeptName());
+    }
+
+    @Test
+    public void cannotRaiseNegativeNumber() {
+        manager.raiseSalary(-2000.00);
+        assertEquals(20000.00, manager.getSalary(), 2);
     }
 
 

@@ -1,5 +1,4 @@
 import management.Director;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -51,7 +50,7 @@ public class DirectorTest {
     @Test
     public void canPayBonus() {
         double bonus = director.payBonus();
-        assertEquals(600.00, bonus, 2);
+        assertEquals(1200.00, bonus, 2);
     }
 
     @Test
@@ -76,8 +75,5 @@ public class DirectorTest {
         assertEquals(600000.00, director.getBudget(), 2);
     }
 }
-//
-//    Prevent unwanted values
-//        Prevent a negative value for the raiseSalary method.
-//        Allow the user to change the Employees name and prevent a null value from being entered.
-//        Override the payBonus in director to return 2% of their salary.
+
+
