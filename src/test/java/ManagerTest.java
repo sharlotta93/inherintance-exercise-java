@@ -26,7 +26,7 @@ public class ManagerTest {
 
     @Test
     public void cannotChangeNameToNull() {
-        manager.setName(" ");
+        manager.setName(null);
         assertEquals("Bob", manager.getName());
     }
 
